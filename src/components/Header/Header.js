@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
+import { Link } from 'react-router-dom'
 
 const authenticatedOptions = (
   <Fragment>
@@ -13,6 +14,8 @@ const unauthenticatedOptions = (
   <Fragment>
     <Nav.Link to="sign-up">Sign Up</Nav.Link>
     <Nav.Link to="sign-in">Sign In</Nav.Link>
+    <Link to="sign-up">Sign Up</Link>
+    <Link to="sign-in">Sign In</Link>
   </Fragment>
 )
 
