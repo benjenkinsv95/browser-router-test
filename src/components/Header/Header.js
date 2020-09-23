@@ -4,15 +4,15 @@ import Navbar from 'react-bootstrap/Navbar'
 
 const authenticatedOptions = (
   <Fragment>
-    <Nav.Link href="change-password">Change Password</Nav.Link>
-    <Nav.Link href="sign-out">Sign Out</Nav.Link>
+    <Nav.Link to="change-password">Change Password</Nav.Link>
+    <Nav.Link to="sign-out">Sign Out</Nav.Link>
   </Fragment>
 )
 
 const unauthenticatedOptions = (
   <Fragment>
-    <Nav.Link href="sign-up">Sign Up</Nav.Link>
-    <Nav.Link href="sign-in">Sign In</Nav.Link>
+    <Nav.Link to="sign-up">Sign Up</Nav.Link>
+    <Nav.Link to="sign-in">Sign In</Nav.Link>
   </Fragment>
 )
 
