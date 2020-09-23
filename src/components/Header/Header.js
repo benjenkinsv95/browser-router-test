@@ -1,31 +1,32 @@
 import React, { Fragment } from 'react'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
+import { Link, NavLink } from 'react-router-dom'
 
 const authenticatedOptions = (
   <Fragment>
-    <Nav.Link href="#change-password">Change Password</Nav.Link>
-    <Nav.Link href="#sign-out">Sign Out</Nav.Link>
+    <NavLink to="/change-password" className='nav-link'>Change Password</NavLink>
+    <NavLink to="/sign-out" className='nav-link'>Sign Out</NavLink>
   </Fragment>
 )
 
 const unauthenticatedOptions = (
   <Fragment>
-    <Nav.Link href="#sign-up">Sign Up</Nav.Link>
-    <Nav.Link href="#sign-in">Sign In</Nav.Link>
+    <NavLink to="/sign-up" className='nav-link'>Sign Up</NavLink>
+    <NavLink to="/sign-in" className='nav-link'>Sign In</NavLink>
   </Fragment>
 )
 
 const alwaysOptions = (
   <Fragment>
-    <Nav.Link to="/">Home</Nav.Link>
+    <NavLink exact to="/" className='nav-link'>Home</NavLink>
   </Fragment>
 )
 
 const Header = ({ user }) => (
   <Navbar bg="primary" variant="dark" expand="md">
-    <Navbar.Brand href="#">
-      react-auth-template
+    <Navbar.Brand>
+      <Link to='/' style={{ color: '#FFF', textDecoration: 'none' }}>react-auth-template</Link>
     </Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
